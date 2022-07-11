@@ -7,10 +7,9 @@ import 'package:my_karaoke_fb/pages/signup_page.dart';
 import 'package:my_karaoke_fb/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(MyApp());
+  Firebase.initializeApp().then((value) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {

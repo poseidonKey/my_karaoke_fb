@@ -16,8 +16,11 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0; 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(title: Text("Your Song"),),
+      body: Container(
+        
+      ),
     );
   }
 }
