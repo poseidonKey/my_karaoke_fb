@@ -18,9 +18,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Your Song"),
-      // ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: _bottomNavigationBar(_selectedIndex),
     );
@@ -37,12 +34,12 @@ class _HomePageState extends State<HomePage> {
       },
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.note),
-          label: 'Songs',
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.account_circle),
           label: 'Profile',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.snowing),
+          label: 'Songs',
         ),
       ],
     );

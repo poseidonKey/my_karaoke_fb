@@ -9,6 +9,8 @@ import 'package:my_karaoke_fb/pages/songs_page.dart';
 import 'package:my_karaoke_fb/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'providers/song_provider.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp().then((value) => runApp(MyApp()));
@@ -32,6 +34,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<AuthProvider>(
           create: (context) => AuthProvider(),
         ),
+        ChangeNotifierProvider<SongList>(
+            create: (BuildContext context) => SongList())
       ],
       child: MaterialApp(
         title: 'Song_jsy',
