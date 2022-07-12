@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
+import 'package:my_karaoke_fb/models/song_model.dart';
 import 'package:my_karaoke_fb/pages/home_page.dart';
 import 'package:my_karaoke_fb/pages/signin_page.dart';
 import 'package:my_karaoke_fb/pages/signup_page.dart';
+import 'package:my_karaoke_fb/pages/songs_page.dart';
 import 'package:my_karaoke_fb/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +46,7 @@ class MyApp extends StatelessWidget {
         routes: {
           SigninPage.routeName: (context) => SigninPage(),
           SignupPage.routeName: (context) => SignupPage(),
-          // NotesPage.routeName: (context) => NotesPage(),
+          SongsPage.routeName: (context) => SongsPage(),
         },
       ),
     );
